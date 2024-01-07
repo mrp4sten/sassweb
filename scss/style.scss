@@ -72,9 +72,10 @@ body {
         background-color: white;
         height: 0.2rem;
         width: 100%;
-        @include transition();
+        @include transition;
       }
 
+      // change class js related
       &.change .line__1 {
         transform: rotate(45deg) translate(0.2rem, 1.3rem);
       }
@@ -91,5 +92,83 @@ body {
         display: none;
       }
     }
+  }
+
+  &__collapse {
+    position: absolute;
+    top: calc(100% - 1rem);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    @include transition;
+
+    &.show__nav {
+      // js related
+      height: calc(210px + 30px);
+    }
+
+    &--nav {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+
+      & li {
+        margin: 2rem 0;
+        list-style-type: none;
+        text-align: center;
+      }
+
+      & a {
+        color: rgb(88, 88, 88);
+        text-decoration: none;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        @include transition;
+
+        &:hover {
+          color: $secondary-color;
+        }
+
+        &.active {
+          color: $secondary-color;
+        }
+      }
+
+      @include desktop {
+        padding: 0;
+
+        & li {
+          margin: 0;
+        }
+      }
+    }
+
+    @include desktop {
+      position: relative;
+      height: auto;
+
+      &--nav {
+        @include flex(null, flex-end);
+        background-color: transparent;
+
+        & a {
+          color: #fff;
+
+          &:hover {
+            color: $secondary-color;
+            opacity: 0.8;
+          }
+        }
+
+        & li {
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    @include flex(null, space-between);
   }
 }
