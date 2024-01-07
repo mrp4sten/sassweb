@@ -1,4 +1,4 @@
-# Project Name: Product Landing Page
+# SASS-WEB
 
 ## Description
 
@@ -8,4 +8,3 @@ This project is designed to help me learn Sass and practice Object-Oriented CSS 
 
 ![Preview1](/.img/Preview1.png)
 ![Preview2](/.img/Preview2.png)
-g
