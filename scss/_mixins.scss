@@ -1,0 +1,10 @@
+@mixin transition {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $content;
+  align-items: $items;
+}
