@@ -2,7 +2,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-@mixin flex {
+@mixin flex ($dir, $content: center, $items: center){
   display: flex;
   flex-direction: $dir;
   justify-content: $content;
