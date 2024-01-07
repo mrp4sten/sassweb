@@ -86,6 +86,10 @@ body {
       &.change .line__3 {
         transform: rotate(-45deg) translate(-0.23rem, -1rem);
       }
+
+      @include desktop {
+        display: none;
+      }
     }
   }
 }

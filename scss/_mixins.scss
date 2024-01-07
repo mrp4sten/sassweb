@@ -8,3 +8,9 @@
   justify-content: $content;
   align-items: $items;
 }
+
+@mixin desktop {
+  @media(min-width: 992px){
+    @content;
+  }
+}
